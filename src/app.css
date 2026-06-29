@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #faf8fc;
+  --color-surface: #ffffff;
+  --color-dark: #12081f;
+  --color-dark-soft: #1e1030;
+  --color-primary: #7c3aed;
+  --color-primary-light: #a78bfa;
+  --color-accent: #ec4899;
+  --color-accent-soft: #fce7f3;
+  --color-teal: #14b8a6;
+  --color-text: #1f1633;
+  --color-text-muted: #5c5470;
+  --color-border: #e8e0f0;
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow: 0 4px 24px rgba(124, 58, 237, 0.08);
+  --shadow-lg: 0 12px 48px rgba(124, 58, 237, 0.14);
+  --max-width: 1120px;
+  --header-height: 72px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  letter-spacing: -0.02em;
+}
+
+.container {
+  width: min(100% - 2rem, var(--max-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(3.5rem, 8vw, 5.5rem);
+}
+
+.section--alt {
+  background: var(--color-surface);
+}
+
+.section--dark {
+  background: var(--color-dark);
+  color: #f0eaf8;
+}
+
+.section__header {
+  margin-bottom: 2.5rem;
+  max-width: 640px;
+}
+
+.section__eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.section--dark .section__eyebrow {
+  color: var(--color-primary-light);
+}
+
+.section__lead {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.section--dark .section__lead {
+  color: #c4b8d8;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: white;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.35);
+}
+
+.btn--primary:hover {
+  box-shadow: 0 8px 28px rgba(124, 58, 237, 0.45);
+}
+
+.btn--outline {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn--outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+.card-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.card__icon {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+.check-list {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.check-list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  font-size: 0.975rem;
+}
+
+.check-list li::before {
+  content: '✓';
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 0.1rem;
+}
+
+.section--dark .check-list li::before {
+  background: rgba(167, 139, 250, 0.2);
+  color: var(--color-primary-light);
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-block: 3rem;
+  }
+}
