@@ -1,14 +1,19 @@
-<section class="partners" aria-label="Aliados institucionales">
+<script>
+  /** @type {{ lazy?: boolean, variant?: 'dark' | 'light' }} */
+  let { lazy = false, variant = 'dark' } = $props();
+</script>
+
+<div class="partners" class:partners--light={variant === 'light'}>
   <div class="partners__inner">
     <img
       src="/S4H_Banner.png"
       alt="Aliados: FICOSEC, Gobierno del Estado de Chihuahua, Democratizamos la Innovación, Desarrollo Económico y Startup Juárez"
       width="1400"
       height="120"
-      loading="eager"
+      loading={lazy ? 'lazy' : 'eager'}
     />
   </div>
-</section>
+</div>
 
 <style>
   .partners {
@@ -25,6 +30,11 @@
     width: 100%;
     object-fit: contain;
     max-height: 90px;
+  }
+
+  .partners--light {
+    background: #f5f5f5;
+    border-bottom: 1px solid var(--color-border);
   }
 
   @media (max-width: 640px) {

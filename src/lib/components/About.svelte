@@ -18,7 +18,7 @@
         <p>
           En formato <strong>bootcamp</strong>, desarrollarás herramientas y productos digitales
           aplicando <strong>vibecoding</strong> — un enfoque creativo que te permite construir
-          soluciones reales de forma intuitiva, sin necesidad de experiencia previa en programación.
+          soluciones reales de forma intuitiva, utilizando IA, sin necesidad de experiencia previa en programación.
         </p>
         <p class="about__note">
           No necesitas experiencia previa en programación ni un nivel escolar mínimo. El programa

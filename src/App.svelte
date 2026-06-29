@@ -23,7 +23,7 @@
 
 <main>
   <Hero />
-  <PartnerBanner />
+  <PartnerBanner variant="light" />
   <QuickStats />
   <About />
   <Learning />

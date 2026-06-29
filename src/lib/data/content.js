@@ -4,7 +4,7 @@ export const quickStats = [
   { label: 'Beca', value: '100%' },
   { label: 'Duración', value: '18 semanas' },
   { label: 'Modalidad', value: 'Híbrida' },
-  { label: 'Inicio', value: '27 jul 2026' },
+  { label: 'Inicio', value: '25 jul 2026' },
   { label: 'Cierre', value: '28 nov 2026' },
   { label: 'Lugar', value: 'Cd. Juárez' },
   { label: 'Cupo', value: '50 mujeres' },
@@ -78,7 +78,7 @@ export const timeline = [
   { date: '20 y 21 de julio de 2026', event: 'Evaluación de postulaciones' },
   { date: '22 de julio de 2026', event: 'Notificación de selección' },
   { date: '23 de julio de 2026', event: 'Fecha límite para confirmar lugar' },
-  { date: '27 de julio de 2026', event: 'Inicio del programa' },
+  { date: '25 de julio de 2026', event: 'Inicio del programa' },
   { date: '28 de noviembre de 2026', event: 'Cierre del programa' },
 ];
 

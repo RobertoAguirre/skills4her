@@ -1,3 +1,7 @@
+<script>
+  import PartnerBanner from './PartnerBanner.svelte';
+</script>
+
 <section id="contacto" class="section">
   <div class="container">
     <header class="section__header">
@@ -38,6 +42,7 @@
     </p>
     <p class="footer__copy">© 2026 Skills4Her · Ciudad Juárez, Chihuahua</p>
   </div>
+  <PartnerBanner lazy />
 </footer>
 
 <style>
@@ -97,7 +102,7 @@
   .footer {
     background: var(--color-dark);
     color: #a89bc0;
-    padding-block: 2.5rem;
+    padding-block: 2.5rem 0;
     font-size: 0.875rem;
     line-height: 1.7;
   }
@@ -107,6 +112,7 @@
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+    padding-bottom: 2.5rem;
   }
 
   .footer__credits strong,
